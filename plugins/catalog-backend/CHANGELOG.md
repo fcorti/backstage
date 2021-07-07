@@ -1,5 +1,16 @@
 # @backstage/plugin-catalog-backend
 
+## 0.11.1
+
+### Patch Changes
+
+- 2d41b6993: Make use of the new `readUrl` method on `UrlReader` from `@backstage/backend-common`.
+- Updated dependencies
+  - @backstage/integration@0.5.8
+  - @backstage/catalog-model@0.9.0
+  - @backstage/backend-common@0.8.5
+  - @backstage/catalog-client@0.3.16
+
 ## 0.11.0
 
 ### Minor Changes

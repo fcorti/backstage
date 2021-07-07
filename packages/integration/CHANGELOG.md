@@ -1,5 +1,12 @@
 # @backstage/integration
 
+## 0.5.8
+
+### Patch Changes
+
+- 43a4ef644: Do not throw in `ScmIntegration` `byUrl` for invalid URLs
+- b691a938e: Fix downloads from repositories located at bitbucket.org
+
 ## 0.5.7
 
 ### Patch Changes

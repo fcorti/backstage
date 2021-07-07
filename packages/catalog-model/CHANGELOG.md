@@ -1,5 +1,11 @@
 # @backstage/catalog-model
 
+## 0.9.0
+
+### Minor Changes
+
+- 77db0c454: Changed the regex to validate names following the Kubernetes validation rule, this allow to be more permissive validating the name of the object in Backstage.
+
 ## 0.8.4
 
 ### Patch Changes

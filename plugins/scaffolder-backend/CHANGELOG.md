@@ -1,5 +1,43 @@
 # @backstage/plugin-scaffolder-backend
 
+## 0.13.0
+
+### Minor Changes
+
+- 7cad18e2f: Adding `config: Config` as a required argument to `createBuiltinActions` and downstream methods in order to support configuration of the default git author used for Scaffolder commits.
+
+  The affected methods are:
+
+  - `createBuiltinActions`
+  - `createPublishGithubAction`
+  - `createPublishGitlabAction`
+  - `createPublishBitbucketAction`
+  - `createPublishAzureAction`
+
+  Call sites to these methods will need to be migrated to include the new `config` argument. See `createRouter` in `plugins/scaffolder-backend/src/service/router.ts` for an example of adding this new argument.
+
+  To configure the default git author, use the `defaultAuthor` key under `scaffolder` in `app-config.yaml`:
+
+  ```yaml
+  scaffolder:
+    defaultAuthor:
+      name: Example
+      email: example@example.com
+  ```
+
+### Patch Changes
+
+- dad481793: add default branch property for publish GitLab, Bitbucket and Azure actions
+- 62c2f10f7: Added filesystem remove/rename built-in actions
+- 11e66e804: bump azure-devops-node to 10.2.2
+- c2db794f5: add defaultBranch property for publish GitHub action
+- 253136fba: removing mandatory of protection for the default branch, that could be handled by the GitHub automation in async manner, thus throwing floating errors
+- Updated dependencies
+  - @backstage/integration@0.5.8
+  - @backstage/catalog-model@0.9.0
+  - @backstage/backend-common@0.8.5
+  - @backstage/catalog-client@0.3.16
+
 ## 0.12.4
 
 ### Patch Changes
