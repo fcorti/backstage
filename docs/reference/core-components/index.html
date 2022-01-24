@@ -92,7 +92,6 @@
 |  <a href="/docs/reference/core-components.responseerrorpanel">ResponseErrorPanel(props)</a> | Renders a warning panel as the effect of a failed server request.<!-- -->Has special treatment for ResponseError errors, to display rich server-provided information about what happened. |
 |  <a href="/docs/reference/core-components.routedtabs">RoutedTabs(props)</a> |  |
 |  <a href="/docs/reference/core-components.select">Select(props)</a> |  |
-|  <a href="/docs/reference/core-components.sidebar">Sidebar(props)</a> |  |
 |  <a href="/docs/reference/core-components.sidebarintro">SidebarIntro(_props)</a> |  |
 |  <a href="/docs/reference/core-components.sidebarpage">SidebarPage(props)</a> |  |
 |  <a href="/docs/reference/core-components.sidebarsearchfield">SidebarSearchField(props)</a> |  |
@@ -113,6 +112,7 @@
 |  <a href="/docs/reference/core-components.table">Table(props)</a> |  |
 |  <a href="/docs/reference/core-components.tabs">Tabs(props)</a> |  |
 |  <a href="/docs/reference/core-components.trendline">TrendLine(props)</a> |  |
+|  <a href="/docs/reference/core-components.usecontent">useContent()</a> | This hook provides a react ref to the main content. Allows to set an element as the main content and focus on that component.<!-- -->*Note: If <code>contentRef</code> is not set <code>focusContent</code> is noop. <code>Content</code> component sets this ref automaticaly* |
 |  <a href="/docs/reference/core-components.usequeryparamstate">useQueryParamState(stateName, debounceTime)</a> |  |
 |  <a href="/docs/reference/core-components.usericon">UserIcon(props)</a> |  |
 |  <a href="/docs/reference/core-components.usesupportconfig">useSupportConfig()</a> |  |
@@ -129,6 +129,7 @@
 <tr><td><a href="/docs/reference/core-components.copytextbuttonprops">CopyTextButtonProps</a></td><td>Properties for <a href="/docs/reference/core-components.copytextbutton">CopyTextButton()</a></td></tr>
 <tr><td><a href="/docs/reference/core-components.dependencygraphprops">DependencyGraphProps</a></td><td>Properties of <a href="/docs/reference/core-components.dependencygraph">DependencyGraph()</a></td></tr>
 <tr><td><a href="/docs/reference/core-components.logviewerprops">LogViewerProps</a></td><td>The properties for the LogViewer component.</td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebargroupprops">SidebarGroupProps</a></td><td>Props for the <code>SidebarGroup</code></td></tr>
 <tr><td><a href="/docs/reference/core-components.tablecolumn">TableColumn</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.tableprops">TableProps</a></td><td></td></tr>
 </tbody>
@@ -151,13 +152,17 @@
 <tbody>
 <tr><td><a href="/docs/reference/core-components.dismissablebanner">DismissableBanner</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.errorboundary">ErrorBoundary</a></td><td></td></tr>
+<tr><td><a href="/docs/reference/core-components.mobilesidebar">MobileSidebar</a></td><td>A navigation component for mobile screens, which sticks to the bottom.<!-- -->It alternates the normal sidebar by grouping the <code>SidebarItems</code> based on provided <code>SidebarGroup</code>s either rendering them as a link or an overlay menu. If no <code>SidebarGroup</code>s are provided the sidebar content is wrapped in an default overlay menu.</td></tr>
+<tr><td><a href="/docs/reference/core-components.proxiedsigninpage">ProxiedSignInPage</a></td><td>A sign-in page that has no user interface of its own. Instead, it relies on sign-in being performed by a reverse authenticating proxy that Backstage is deployed behind, and leverages its session handling.</td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebar_intro_local_storage">SIDEBAR_INTRO_LOCAL_STORAGE</a></td><td></td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebar">Sidebar</a></td><td>Passing children into the desktop or mobile sidebar depending on the context</td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarconfig">sidebarConfig</a></td><td></td></tr>
-<tr><td><a href="/docs/reference/core-components.sidebarcontext">SidebarContext</a></td><td></td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebarcontext">SidebarContext</a></td><td>Context wether the <code>Sidebar</code> is open</td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebardivider">SidebarDivider</a></td><td></td></tr>
-<tr><td><a href="/docs/reference/core-components.sidebarexpandbutton">SidebarExpandButton</a></td><td>A button which allows you to expand the sidebar when clicked. Use optionally to replace sidebar's expand-on-hover feature with expand-on-click.</td></tr>
-<tr><td><a href="/docs/reference/core-components.sidebaritem">SidebarItem</a></td><td></td></tr>
-<tr><td><a href="/docs/reference/core-components.sidebarpinstatecontext">SidebarPinStateContext</a></td><td></td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebarexpandbutton">SidebarExpandButton</a></td><td>A button which allows you to expand the sidebar when clicked. Use optionally to replace sidebar's expand-on-hover feature with expand-on-click.<!-- -->If you are using this you might want to set the <code>disableExpandOnHover</code> of the <code>Sidebar</code> to <code>true</code>.</td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebargroup">SidebarGroup</a></td><td>Groups items of the <code>Sidebar</code> together.<!-- -->On bigger screens, this won't have any effect at the moment. On small screens, it will add an action to the bottom navigation - either triggering an overlay menu or acting as a link</td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebaritem">SidebarItem</a></td><td>Creates a <code>SidebarItem</code>If children contain a <code>SidebarSubmenu</code> component the <code>SidebarItem</code> will have a expandable submenu</td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebarpinstatecontext">SidebarPinStateContext</a></td><td>Contains the state on how the <code>Sidebar</code> is rendered</td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarscrollwrapper">SidebarScrollWrapper</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarspace">SidebarSpace</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarspacer">SidebarSpacer</a></td><td></td></tr>
@@ -229,22 +234,26 @@
 <tr><td><a href="/docs/reference/core-components.metadatatabletitlecellclasskey">MetadataTableTitleCellClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.micdropclasskey">MicDropClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.missingannotationemptystateclasskey">MissingAnnotationEmptyStateClassKey</a></td><td></td></tr>
+<tr><td><a href="/docs/reference/core-components.mobilesidebarprops">MobileSidebarProps</a></td><td>Props of MobileSidebar</td></tr>
 <tr><td><a href="/docs/reference/core-components.oauthrequestdialogclasskey">OAuthRequestDialogClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.openeddropdownclasskey">OpenedDropdownClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.overflowtooltipclasskey">OverflowTooltipClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.pageclasskey">PageClassKey</a></td><td></td></tr>
+<tr><td><a href="/docs/reference/core-components.proxiedsigninpageprops">ProxiedSignInPageProps</a></td><td>Props for <a href="/docs/reference/core-components.proxiedsigninpage">ProxiedSignInPage</a><!-- -->.</td></tr>
 <tr><td><a href="/docs/reference/core-components.responseerrorpanelclasskey">ResponseErrorPanelClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.selectclasskey">SelectClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.selecteditems">SelectedItems</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.selectinputbaseclasskey">SelectInputBaseClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.selectitem">SelectItem</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarclasskey">SidebarClassKey</a></td><td></td></tr>
-<tr><td><a href="/docs/reference/core-components.sidebarcontexttype">SidebarContextType</a></td><td></td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebarcontexttype">SidebarContextType</a></td><td>Types for the <code>SidebarContext</code></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebardividerclasskey">SidebarDividerClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarintroclasskey">SidebarIntroClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebaritemclasskey">SidebarItemClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarpageclasskey">SidebarPageClassKey</a></td><td></td></tr>
-<tr><td><a href="/docs/reference/core-components.sidebarpinstatecontexttype">SidebarPinStateContextType</a></td><td></td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebarpageprops">SidebarPageProps</a></td><td>Props for SidebarPage</td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebarpinstatecontexttype">SidebarPinStateContextType</a></td><td>Type of <code>SidebarPinStateContext</code></td></tr>
+<tr><td><a href="/docs/reference/core-components.sidebarprops">SidebarProps</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarspaceclasskey">SidebarSpaceClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarspacerclasskey">SidebarSpacerClassKey</a></td><td></td></tr>
 <tr><td><a href="/docs/reference/core-components.sidebarsubmenuitemdropdownitem">SidebarSubmenuItemDropdownItem</a></td><td>Clickable item displayed when submenu item is clicked. title: Text content of item to: Path to navigate to when item is clicked</td></tr>
