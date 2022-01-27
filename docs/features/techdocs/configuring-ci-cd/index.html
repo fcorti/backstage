@@ -199,10 +199,7 @@ use any CI and any other
         <span class="hljs-attr">run:</span> <span class="hljs-string">techdocs-cli</span> <span class="hljs-string">generate</span> <span class="hljs-string">--no-docker</span> <span class="hljs-string">--verbose</span>
 
       <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Publish</span> <span class="hljs-string">docs</span> <span class="hljs-string">site</span>
-        <span class="hljs-attr">run:</span>
-          <span class="hljs-string">techdocs-cli</span> <span class="hljs-string">publish</span> <span class="hljs-string">--publisher-type</span> <span class="hljs-string">awsS3</span> <span class="hljs-string">--storage-name</span>
-          <span class="hljs-string">$TECHDOCS_S3_BUCKET_NAME</span> <span class="hljs-string">--entity</span>
-          <span class="hljs-string">$ENTITY_NAMESPACE/$ENTITY_KIND/$ENTITY_NAME</span>
+        <span class="hljs-attr">run:</span> <span class="hljs-string">techdocs-cli</span> <span class="hljs-string">publish</span> <span class="hljs-string">--publisher-type</span> <span class="hljs-string">awsS3</span> <span class="hljs-string">--storage-name</span> <span class="hljs-string">$TECHDOCS_S3_BUCKET_NAME</span> <span class="hljs-string">--entity</span> <span class="hljs-string">$ENTITY_NAMESPACE/$ENTITY_KIND/$ENTITY_NAME</span>
 </code></pre>
 <p>When the new repository is scaffolded or new documentation updates are
 committed, the GitHub Action workflow will publish the TechDocs site, which can
