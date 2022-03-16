@@ -2,12 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://backstage.io/blog</id>
     <title>Backstage Software Catalog and Developer Platform Blog</title>
-    <updated>2022-03-04T06:00:00.000Z</updated>
+    <updated>2022-03-16T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://backstage.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Backstage Software Catalog and Developer Platform news and events.</subtitle>
     <logo>https://backstage.io/undefined</logo>
     <rights>Copyright © 2022 Backstage Project Authors. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page: https://www.linuxfoundation.org/trademark-usage</rights>
+    <entry>
+        <title type="html"><![CDATA[Backstage Turns Two!]]></title>
+        <id>https://backstage.io/blog/2022/03/16/backstage-turns-two.html</id>
+        <link href="https://backstage.io/blog/2022/03/16/backstage-turns-two.html"/>
+        <updated>2022-03-16T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p><img src="/blog/assets/22-03-16/backstage-2nd-birthday.gif" alt="A cake celebrating Backstage’s second birthday"></p>
+<p><strong>TLDR:</strong> Backstage has turned two. Of course, this is software, so we expect things to move fast. But when you have a passionate, worldwide community building together, we’ve now seen firsthand just how fast that can be. We’re marking our second year as a community by becoming a CNCF incubating project, reaching 100 public adopters, releasing version 1.0 of the core app, and other very nice birthday gifts. Rather than a toddler finding their feet, Backstage today is beginning to look awfully grown-up for a two-year-old.</p>
+]]></summary>
+        <author>
+            <name>Lee Mills, Spotify</name>
+            <uri>https://github.com/leemills83</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Avoid upgrade surprises with Backstage Upgrade Helper]]></title>
         <id>https://backstage.io/blog/2022/03/04/backstage-upgrade-helper.html</id>

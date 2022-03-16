@@ -95,16 +95,16 @@ default catalog page and create a component.</p>
             <span class="hljs-tag">&lt;<span class="hljs-name">CreateButton</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Create Component"</span> <span class="hljs-attr">to</span>=<span class="hljs-string">{createComponentLink()}</span> /&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">SupportButton</span>&gt;</span>All your software catalog entities<span class="hljs-tag">&lt;/<span class="hljs-name">SupportButton</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">ContentHeader</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">FilteredEntityLayout</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">FilterContainer</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">CatalogFilterLayout</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">CatalogFilterLayout.Filters</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">EntityTypePicker</span> /&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">UserListPicker</span> <span class="hljs-attr">initialFilter</span>=<span class="hljs-string">{initiallySelectedFilter}</span> /&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">EntityTagPicker</span> /&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">FilterContainer</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">EntityListContainer</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">CatalogFilterLayout.Filters</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">CatalogFilterLayout.Content</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">CatalogTable</span> <span class="hljs-attr">columns</span>=<span class="hljs-string">{columns}</span> <span class="hljs-attr">actions</span>=<span class="hljs-string">{actions}</span> /&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">EntityListContainer</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">FilteredEntityLayout</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">CatalogFilterLayout.Content</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">CatalogFilterLayout</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">Content</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">EntityListProvider</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">PageWithHeader</span>&gt;</span></span>
@@ -191,18 +191,18 @@ parameter:</p>
   return (
     ...
         &lt;EntityListProvider&gt;
-          &lt;FilteredEntityLayout&gt;
-            &lt;FilterContainer&gt;
+          &lt;CatalogFilterLayout&gt;
+            &lt;CatalogFilterLayout.Filters&gt;
               &lt;EntityKindPicker initialFilter="component" hidden /&gt;
               &lt;EntityTypePicker /&gt;
               &lt;UserListPicker initialFilter={initiallySelectedFilter} /&gt;
 <span class="hljs-addition">+             &lt;EntitySecurityTierPicker /&gt;</span>
               &lt;EntityTagPicker /&gt;
-            &lt;FilterContainer&gt;
-            &lt;EntityListContainer&gt;
+            &lt;CatalogFilterLayout.Filters&gt;
+            &lt;CatalogFilterLayout.Content&gt;
               &lt;CatalogTable columns={columns} actions={actions} /&gt;
-            &lt;/EntityListContainer&gt;
-          &lt;/FilteredEntityLayout&gt;
+            &lt;/CatalogFilterLayout.Content&gt;
+          &lt;/CatalogFilterLayout&gt;
         &lt;/EntityListProvider&gt;
     ...
 };
